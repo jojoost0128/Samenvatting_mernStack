@@ -1,12 +1,12 @@
 import React from "react";
-import { Routes, Route, NavLink } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 
-import OpstartReactApp from './React/Opstart-react-app';
-import InfoTussenComponenten from './React/informatie-sturen-tussen-componenten'
-import Events from './React/Events';
-import State from './React/State';
-import ReactRouter from "./React/ReactRouter";
+import OpstartReactApp from './ReactPageComponents/Opstart-react-app';
+import InfoTussenComponenten from './ReactPageComponents/informatie-sturen-tussen-componenten'
+import Events from './ReactPageComponents/Events';
+import State from './ReactPageComponents/State';
+import ReactRouter from "./ReactPageComponents/ReactRouter";
 import LinkLijst from "../Shared/LinkLijst";
 
 const ReactPage = props => {
@@ -19,18 +19,15 @@ const ReactPage = props => {
     ]
     return (
         <div>
-            <LinkLijst paths={LinkObjectLijstje} />
-            {/*<nav>
-                <ul>
-                    <li><NavLink to="OpstartReactApp" >Opstarten react app</NavLink></li>
-                    <li><NavLink to="InfoTussenComponenten">Informatie sturen tussen componenten</NavLink></li>
-                    <li><NavLink to="Events">Events</NavLink></li>
-                    <li><NavLink to="State">State</NavLink></li>
-                    <li><NavLink to="ReactRouter">React Routers</NavLink></li>
-                </ul>
-            </nav>*/}
             <Routes>
-                <Route path="/" element={<h2>Reactpage</h2>} />
+                <Route path="/" element={
+                    <div>
+                        <h2>Reactpage</h2>
+                        <nav>
+                            <LinkLijst paths={LinkObjectLijstje} />
+                        </nav>
+                    </div>
+                } />
                 <Route path="OpstartReactApp" element={<OpstartReactApp />} />
                 <Route path="InfoTussenComponenten" element={<InfoTussenComponenten voorbeeld='Informatie sturen tussen componenten' />} />
                 <Route path="Events" element={<Events />} />

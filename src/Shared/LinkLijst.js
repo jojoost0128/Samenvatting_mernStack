@@ -1,11 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const LinkLijst = props => {
-    console.log(props.paths)
+
     return (
         <ul>
             {props.paths.map(theWay => {
-                return (<li></li>)
+                return (<li><NavLink to={theWay.path} end>{theWay.name}</NavLink></li>)
             })}
         </ul>
     )
