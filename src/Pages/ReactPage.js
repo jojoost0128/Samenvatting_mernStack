@@ -7,6 +7,8 @@ import InfoTussenComponenten from './ReactPageComponents/informatie-sturen-tusse
 import Events from './ReactPageComponents/Events';
 import State from './ReactPageComponents/State';
 import ReactRouter from "./ReactPageComponents/ReactRouter";
+import TernaryExpresions from "./ReactPageComponents/TernaryExpresions";
+import UseEffectHook from "./ReactPageComponents/useEffectHook";
 import LinkLijst from "../Shared/LinkLijst";
 
 const ReactPage = props => {
@@ -15,7 +17,9 @@ const ReactPage = props => {
         { path: 'InfoTussenComponenten', name: 'Informatie sturen tussen componenten' },
         { path: 'Events', name: 'Events' },
         { path: 'State', name: 'State' },
-        { path: 'ReactRouter', name: 'Opstarten react app' },
+        { path: 'ReactRouter', name: 'React router opzetten' },
+        { path: 'TernaryExpresions', name: 'Ternary expresions' },
+        { path: 'UseEffectHook', name: 'useEffect uitleg' },
     ]
     return (
         <div>
@@ -33,6 +37,8 @@ const ReactPage = props => {
                 <Route path="Events" element={<Events />} />
                 <Route path="State" element={<State />} />
                 <Route path="ReactRouter" element={<ReactRouter />} />
+                <Route path="TernaryExpresions" element={<TernaryExpresions />} />
+                <Route path="UseEffectHook" element={<UseEffectHook />} />
             </Routes>
         </div>
     )
