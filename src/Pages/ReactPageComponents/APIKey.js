@@ -1,13 +1,7 @@
 import React from "react";
 
 const APIKey = props => {
-    /*
-    const API_Key = ''
-    fetch(`https://github.com/data?key=${API_Key}`)
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error))
-    */
+
 
     return (
         <div>
