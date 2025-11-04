@@ -10,6 +10,8 @@ import ReactRouter from "./ReactPageComponents/ReactRouter";
 import TernaryExpresions from "./ReactPageComponents/TernaryExpresions";
 import UseEffectHook from "./ReactPageComponents/useEffectHook";
 import LinkLijst from "../Shared/LinkLijst";
+import Overig from "./ReactPageComponents/Overig";
+import APIKey from "./ReactPageComponents/APIKey";
 
 const ReactPage = props => {
     const LinkObjectLijstje = [
@@ -20,6 +22,8 @@ const ReactPage = props => {
         { path: 'ReactRouter', name: 'React router opzetten' },
         { path: 'TernaryExpresions', name: 'Ternary expresions' },
         { path: 'UseEffectHook', name: 'useEffect uitleg' },
+        { path: 'Overig', name: 'Overige extra informatie' },
+        { path: 'APIKey', name: 'API key' }
     ]
     return (
         <div>
@@ -39,6 +43,8 @@ const ReactPage = props => {
                 <Route path="ReactRouter" element={<ReactRouter />} />
                 <Route path="TernaryExpresions" element={<TernaryExpresions />} />
                 <Route path="UseEffectHook" element={<UseEffectHook />} />
+                <Route path="Overig" element={<Overig />} />
+                <Route path="APIKey" element={<APIKey />} />
             </Routes>
         </div>
     )
