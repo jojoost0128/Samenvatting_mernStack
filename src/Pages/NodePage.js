@@ -2,11 +2,13 @@ import React from "react";
 import { Routes, Route } from "react-router-dom"
 
 import NodeBasic from "./NodePageComponents/NodeBasic";
+import Server from "./NodePageComponents/Server";
 import LinkLijst from "../Shared/LinkLijst";
 
 const NodePage = props => {
     const LinkObjectLijstje = [
         { path: 'NodeBasic', name: 'Node basis' },
+        { path: 'Server', name: 'Server maken' },
     ]
 
     return (
@@ -19,6 +21,7 @@ const NodePage = props => {
                     </div>
                 } />
                 <Route path='NodeBasic' element={<NodeBasic />} />
+                <Route path='Server' element={<Server />} />
             </Routes>
         </div>
     )
