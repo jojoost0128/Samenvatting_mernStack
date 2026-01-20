@@ -18,6 +18,18 @@ const RoutersEnControlers = props => {
                 In de main file kan je de router op stellen met de volgende stuk code {`app.use('/path, Router)`}.<br />
                 hiermee zorg je ervoor dat je de router oproept als de html gebruik maakt van de path in de main file.<br />
             </p>
+            <h3>Controlers basis</h3>
+            <p>
+                Een router is bedoeld voor in ieder geval je main file om een standaard path te maken voor je middelware in je sub files.<br />
+                In de sub files middelware heb je de path zodat je specifiek die middelware kan aanroepen.<br />
+                Als je een groot project hebt dan kan je files onoverzichtelijk worden hoe je middelware werkt.<br />
+                Controlers splitsen middelware op in de path onderdeel en de functie onderdeel. Voorbeeld path: {`app.get(/path)`} voorbeeld functie: {`(req, res, next) => {}`}<br />
+                Het voordeel hiervan is dat je dan een file hebt waar je terug kan vinden wat je gemaakt hebt en een andere file dat alles verwerkt.<br />
+                Wat je moet doen is een functie maken in je controler file met req, res en next.<br />
+                Daarin verwerk je je middelware functionaliteit.<br />
+                Dan stuur je de functie het naar je path file waar je de middelware wilt hebben.
+                En tot slot plak je functie achter je path zoals {`app.get(/path, importControler.functieControler)`}
+            </p>
         </div>
     )
 }
