@@ -6,6 +6,7 @@ import ReactPage from './Pages/ReactPage';
 import ExpressPage from './Pages/ExpressPage'
 import NodePage from './Pages/NodePage';
 import MongoDBPage from './Pages/MongoDBPage';
+import CSS from './Pages/CSSPage';
 import LinkLijst from './Shared/LinkLijst';
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     { path: 'ReactPage', name: 'React' },
     { path: 'ExpressPage', name: 'Express' },
     { path: 'NodePage', name: 'Node' },
-    { path: 'MongoDBPage', name: 'MongoDB' }
+    { path: 'MongoDBPage', name: 'MongoDB' },
+    { path: 'CSS', name: 'CSS' }
   ]
   return (
 
@@ -28,6 +30,7 @@ function App() {
         <Route path='/ExpressPage/*' element={<ExpressPage />} />
         <Route path='/NodePage/*' element={<NodePage />} />
         <Route path='/MongoDBPage/*' element={<MongoDBPage />} />
+        <Route path='/CSS/*' element={<CSS />} />
       </Routes>
     </Router>
   );
